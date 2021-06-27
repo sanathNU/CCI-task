@@ -2,4 +2,7 @@
 ## This is for a coding task for BMSCE Robotics club selection process
 
 ## The question was:
-Write a program to take a user defined input and detect the respective shape
+### Task 1:
+Write a program to find the real time dimensions of any object using OpenCV
+### Task 2:
+Write a program to take a user defined input and detect the respective shape using OpenCV
