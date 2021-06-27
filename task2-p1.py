@@ -1,4 +1,4 @@
-#not yet completed
+# NOT WORKING!!!
 
 # program to find the real time dimensions of an object
 from scipy.spatial import distance as dist
