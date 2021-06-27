@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
   
 # reading image
 img = cv2.imread('shapes.jpg')
-#cv2.imshow('shapes',img)
+cv2.imshow('shapes',img)
   
 # converting image into grayscale image
 gray1 = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -58,11 +58,11 @@ for contour in contours:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
   
     elif len(approx) == 4:
-        #(x,y,w,h) = cv2.boundingRect(approx)
-        #ar = w /float(h)
+        (x,y,w,h) = cv2.boundingRect(approx)
+        ar = w /float(h)
         
-        #Name = 'Square' if ar >=0.95 and ar <=1.05 else Rectangle
-        cv2.putText(img, 'Quad', (x, y),
+        Name = 'Square' if ar >=0.95 and ar <=1.05 else 'Rectangle'
+        cv2.putText(img, Name, (x, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 00,), 2)
   
     elif len(approx) == 5:
@@ -81,9 +81,9 @@ for contour in contours:
         cv2.putText(img, 'Octogon', (x, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
         
-    #elif 6 < len(approx) < 15:
-        #cv2.putText(img, "Ellipse", (x, y), 
-                    #cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0 ,0), 2)
+    elif 6 < len(approx) < 15:
+        cv2.putText(img, "Ellipse", (x, y), 
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0 ,0), 2)
     else:
         cv2.putText(img, 'Circle', (x, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
