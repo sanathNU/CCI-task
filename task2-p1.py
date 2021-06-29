@@ -1,5 +1,5 @@
 # NOT WORKING!!!
-
+# prototype writen for working on an image should extend to real time video
 # program to find the real time dimensions of an object
 from scipy.spatial import distance as dist
 from imutils import perspective,contours
